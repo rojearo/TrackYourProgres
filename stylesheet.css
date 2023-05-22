@@ -1,6 +1,6 @@
 * {
     padding: 0;
-    margin: 0;
+    margin-bottom: 50px;
 }
 
 .navbar {
@@ -20,3 +20,18 @@
 .navbar ul,li {
     list-style: none;
 }
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.images{
+    width: 80%;
+    height: 70vh;
+    border: 1px solid black;
+
+}
+
