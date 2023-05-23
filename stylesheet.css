@@ -47,5 +47,20 @@
     display: flex;
     width: 60%;
     text-align: center;
+    margin-bottom: 100px;
+}
+
+.film-banner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.small-images{
+    border: 1px solid black;
+    width: 20%;
+    height: 400px;
+    margin-bottom: 50px;
 }
 
