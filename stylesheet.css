@@ -33,7 +33,7 @@
 .images{
     width: 80%;
     height: 70vh;
-    border: 1px solid black;
+    border-radius: 5px;
 }
 
 .text{
@@ -52,20 +52,25 @@
 
 .film-banner{
     display: flex;
+    text-align: center;
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
 }
 
 .small-images{
-    border: 1px solid black;
     width: 20%;
     height: 400px;
     margin-bottom: 50px;
 }
 
 .small-images2{
+    border-radius: 5px;
     height: 400px;
     width: 100%;
+}
+
+.caption {
+    display: block;
 }
 
