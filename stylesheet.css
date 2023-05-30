@@ -9,6 +9,8 @@
     align-items: center;
     justify-content: space-evenly;
     margin-bottom: 50px;
+    background-color: #2E4F4F;
+    color: #CBE4DE;
 }
 
 .navbar ul {
