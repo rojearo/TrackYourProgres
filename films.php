@@ -6,11 +6,12 @@ class films
     protected $filmBeschrijving;
     protected $filmRating;
 
-    public function __construct($filmNaam = NULL, $filmBeschrijving = NULL, $filmRating = NULL)
+    public function __construct($filmNaam = NULL, $filmBeschrijving = NULL, $filmRating = NULL, $filmBanner = NULL)
     {
         $this->filmNaam = $filmNaam;
         $this->filmBeschrijving = $filmBeschrijving;
         $this->filmRating = $filmRating;
+        $this->filmBanner = $filmBanner;
     }
 
     /**
@@ -61,6 +62,24 @@ class films
         $this->filmRating = $filmRating;
     }
 
+    /**
+     * @return mixed|null
+     */
+    public function getFilmBanner()
+    {
+        return $this->filmBanner;
+    }
+
+    /**
+     * @param mixed|null $filmBanner
+     */
+    public function setFilmBanner($filmBanner)
+    {
+        $this->filmBanner = $filmBanner;
+    }
+
+
+
     public function createFilm()
     {
         echo "dit is een createFilm()<br/>";
@@ -70,17 +89,19 @@ class films
         $FilmNaam = $this->getFilmNaam();
         $FilmBeschrijving = $this->getFilmBeschrijving();
         $FilmRating = $this->getFilmRating();
+        $filmBanner = $this->getFilmBanner();
 
         $sql = $conn->Prepare
         ("
                     insert into film values
-                    (:FilmID, :FilmNaam, :FilmBeschrijving, :FilmRating)
+                    (:FilmID, :FilmNaam, :FilmBeschrijving, :FilmRating, :FilmBanner)
         ");
 
         $sql->bindParam("FilmID", $FilmId);
         $sql->bindParam("FilmNaam", $FilmNaam);
         $sql->bindParam("FilmBeschrijving", $FilmBeschrijving);
         $sql->bindParam("FilmRating", $FilmRating);
+        $sql->BindParam("FilmBanner, $filmBanner");
         $sql->execute();
 
         echo "de film is toegevoegd <br/>";
@@ -90,7 +111,7 @@ class films
     {
         require "connect.php";
         $sql = $conn->prepare("
-                                select FilmId, FilmNaam, FilmBeschrijving, FilmRating
+                                select FilmId, FilmNaam, FilmBeschrijving, FilmRating, FilmBanner
                                 from film
                                 ");
         $sql->execute();
@@ -100,6 +121,7 @@ class films
             $this->FilmNaam=$Film["FilmNaam"]. "  ";
             $this->FilmBeschrijving=$Film["FilmBeschrijving"]. "  ";
             $this->FilmRating=$Film["FilmRating"]. "  ";
+            $this->FilmBanner=$Film["FilmBanner"]. "  ";
         }
     }
 
