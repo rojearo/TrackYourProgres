@@ -176,19 +176,19 @@ class films
         require "connect.php";
 
         $sql = $conn->prepare("
-                                select FilmId, FilmNaam, Filmbeschrijving, FilmRating, filmBanner
+                                select FilmID, FilmNaam, Filmbeschrijving, FilmRating, filmBanner
                                 from film
-                                where FilmId=:FilmdID
+                                where FilmID=:FilmID
         ");
 
         $sql->bindParam("FilmID", $FilmID);
         $sql->execute();
 
         foreach ($sql as $Film) {
-            $this->FilmNaam = $Film["FilmNaam"];
-            $this->FilmBeschrijving = $Film["FilmBeschrijving"];
-            $this->FilmRating = $Film["FilmRating"];
-            $this->FilmBanner = $Film["FilmBanner"];
+            $this->filmNaam = $Film["FilmNaam"];
+            $this->filmBeschrijving = $Film["Filmbeschrijving"];
+            $this->filmRating = $Film["FilmRating"];
+            $this->filmBanner = $Film["FilmBanner"];
 
         }
     }
