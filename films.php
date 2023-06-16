@@ -110,17 +110,17 @@ class films
     {
         require "connect.php";
         $sql = $conn->prepare("
-                                select FilmId, FilmNaam, FilmBeschrijving, FilmRating, FilmBanner
+                                select FilmID, FilmNaam, FilmBeschrijving, FilmRating, FilmBanner
                                 from film
                                ");
         $sql->execute();
         foreach ($sql as $Film) {
 
-            echo $Film["FilmId"] . "<br>";
-            $this->FilmNaam = $Film["FilmNaam"] . "  ";
-            $this->FilmBeschrijving = $Film["FilmBeschrijving"] . "  ";
-            $this->FilmRating = $Film["FilmRating"] . "  ";
-            $this->FilmBanner = $Film["FilmBanner"] . "  ";
+            echo $Film["FilmID"] . "<br>";
+            $this->filmNaam = $Film["FilmNaam"] . "  ";
+            $this->filmBeschrijving = $Film["FilmBeschrijving"] . "  ";
+            $this->filmRating = $Film["FilmRating"] . "  ";
+            $this->filmBanner = $Film["FilmBanner"] . "  ";
         }
     }
 
