@@ -135,10 +135,10 @@ class films
         }
     }
 
-    public function updateFilm($FilmId)
+    public function updateFilm($FilmID)
     {
         require "connect.php";
-        $FilmId;
+        $FilmID;
         $FilmNaam = $this->getFilmNaam();
         $FilmBeschrijving = $this->getFilmBeschrijving();
         $FilmRating = $this->getFilmRating();
@@ -151,7 +151,7 @@ class films
                                where FilmID=:FilmID
                                ");
 
-        $sql->bindParam(":FilmId", $FilmId);
+        $sql->bindParam(":FilmID", $FilmID);
         $sql->bindParam(":Filmnaam", $FilmNaam);
         $sql->bindParam(":FilmBeschrijving", $FilmBeschrijving);
         $sql->bindParam(":FilmRating", $FilmRating);
@@ -171,17 +171,17 @@ class films
         $sql->execute();
     }
 
-    public function searchFilm($FilmId)
+    public function searchFilm($FilmID)
     {
         require "connect.php";
 
         $sql = $conn->prepare("
                                 select FilmId, FilmNaam, Filmbeschrijving, FilmRating, filmBanner
                                 from film
-                                where FilmId=:FilmdId
+                                where FilmId=:FilmdID
         ");
 
-        $sql->bindParam("FilmId", $FilmId);
+        $sql->bindParam("FilmID", $FilmID);
         $sql->execute();
 
         foreach ($sql as $Film) {

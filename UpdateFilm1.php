@@ -12,7 +12,7 @@
 <div class="form">
     <h1>update Film formulier 1</h1>
 
-    <form action="updateFilm2.php" method="post">
+    <form action="UpdateFilm2.php" method="post">
 
         <label for="FilmID">FilmID:</label>
 
