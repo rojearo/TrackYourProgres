@@ -79,7 +79,6 @@ class films
     }
 
 
-
     public function createFilm()
     {
         echo "dit is een createFilm()<br/>";
@@ -113,16 +112,73 @@ class films
         $sql = $conn->prepare("
                                 select FilmId, FilmNaam, FilmBeschrijving, FilmRating, FilmBanner
                                 from film
-                                ");
+                               ");
         $sql->execute();
-        foreach($sql as $Film){
+        foreach ($sql as $Film) {
 
             echo $Film["FilmId"] . "<br>";
-            $this->FilmNaam=$Film["FilmNaam"]. "  ";
-            $this->FilmBeschrijving=$Film["FilmBeschrijving"]. "  ";
-            $this->FilmRating=$Film["FilmRating"]. "  ";
-            $this->FilmBanner=$Film["FilmBanner"]. "  ";
+            $this->FilmNaam = $Film["FilmNaam"] . "  ";
+            $this->FilmBeschrijving = $Film["FilmBeschrijving"] . "  ";
+            $this->FilmRating = $Film["FilmRating"] . "  ";
+            $this->FilmBanner = $Film["FilmBanner"] . "  ";
         }
     }
 
+    public function updateFilm($FilmId)
+    {
+        require "connect.php";
+        $FilmId;
+        $FilmNaam = $this->getFilmNaam();
+        $FilmBeschrijving = $this->getFilmBeschrijving();
+        $FilmRating = $this->getFilmRating();
+        $FilmBanner = $this->getFilmBanner();
+
+
+        $sql = $conn->prepare("
+                               update film 
+                               set FilmBeschrijving=:FilmBeschrijving, FilmRating=:FilmRating, filmBanner=:FilmBanner
+                               where FilmId=:FilmId
+                               ");
+
+        $sql->bindParam(":FilmId", $FilmId);
+        $sql->bindParam(":Filmnaam", $FilmNaam);
+        $sql->bindParam(":FilmBeschrijving", $FilmBeschrijving);
+        $sql->bindParam(":FilmRating", $FilmRating);
+        $sql->bindParam(":FilmBanner", $FilmBanner);
+        $sql->execute();
+    }
+
+    public function deleteFilm($FilmId)
+    {
+        require "connect.php";
+
+        $sql = $conn->prepare("
+                                delete from film where FilmdId=:FilmId
+                                ");
+
+        $sql->bindParam(":FilmId", $FilmId);
+        $sql->execute();
+    }
+
+    public function searchFilm($FilmId)
+    {
+        require "connect.php";
+
+        $sql = $conn->prepare("
+                                select FilmId, FilmNaam, Filmbeschrijving, FilmRating, filmBanner
+                                from film
+                                where FilmId=:FilmdId
+        ");
+
+        $sql->bindParam("FilmId", $FilmId);
+        $sql->execute();
+
+        foreach ($sql as $Film) {
+            $this->FilmNaam = $Film["FilmNaam"];
+            $this->FilmBeschrijving = $Film["FilmBeschrijving"];
+            $this->FilmRating = $Film["FilmRating"];
+            $this->FilmBanner = $Film["FilmBanner"];
+
+        }
+    }
 }
