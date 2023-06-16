@@ -12,7 +12,7 @@
         <li>Films</li>
         <li>Series</li>
         <li>Anime</li>
-        <li>Mijn list</li>
+        <li> <a href="MijnLijst.php"> Mijn list </a> </li>
     </ul>
     <ul>
         <li>Inloggen</li>
