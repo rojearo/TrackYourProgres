@@ -159,15 +159,15 @@ class films
         $sql->execute();
     }
 
-    public function deleteFilm($FilmId)
+    public function deleteFilm($FilmID)
     {
         require "connect.php";
 
         $sql = $conn->prepare("
-                                delete from film where FilmdId=:FilmId
+                                delete from film where FilmID=:FilmID
                                 ");
 
-        $sql->bindParam(":FilmId", $FilmId);
+        $sql->bindParam(":FilmID", $FilmID);
         $sql->execute();
     }
 
