@@ -5,6 +5,7 @@ class films
     protected $filmNaam;
     protected $filmBeschrijving;
     protected $filmRating;
+    protected $filmBanner;
 
     public function __construct($filmNaam = NULL, $filmBeschrijving = NULL, $filmRating = NULL, $filmBanner = NULL)
     {
@@ -78,6 +79,16 @@ class films
         $this->filmBanner = $filmBanner;
     }
 
+    public function oplezen()
+    {
+        echo
+            "film naam = " . $this->getFilmNaam() .
+            "<br> Film Rating = " . $this->getFilmRating() .
+            "<br> Film Beschrijving = " . $this->getFilmBeschrijving() .
+            "<br> Film Banner = " . $this->getFilmBanner() .
+            "<br>";
+    }
+
 
     public function createFilm()
     {
@@ -137,7 +148,7 @@ class films
         $sql = $conn->prepare("
                                update film 
                                set FilmBeschrijving=:FilmBeschrijving, FilmRating=:FilmRating, filmBanner=:FilmBanner
-                               where FilmId=:FilmId
+                               where FilmID=:FilmID
                                ");
 
         $sql->bindParam(":FilmId", $FilmId);
