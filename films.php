@@ -84,7 +84,7 @@ class films
         echo "dit is een createFilm()<br/>";
         require "Connect.php";
 
-        $FilmId = NULL;
+        $FilmID = NULL;
         $FilmNaam = $this->getFilmNaam();
         $FilmBeschrijving = $this->getFilmBeschrijving();
         $FilmRating = $this->getFilmRating();
@@ -96,11 +96,11 @@ class films
                     (:FilmID, :FilmNaam, :FilmBeschrijving, :FilmRating, :FilmBanner)
         ");
 
-        $sql->bindParam("FilmID", $FilmId);
+        $sql->bindParam("FilmID", $FilmID);
         $sql->bindParam("FilmNaam", $FilmNaam);
         $sql->bindParam("FilmBeschrijving", $FilmBeschrijving);
         $sql->bindParam("FilmRating", $FilmRating);
-        $sql->BindParam("FilmBanner, $filmBanner");
+        $sql->BindParam("FilmBanner", $filmBanner);
         $sql->execute();
 
         echo "de film is toegevoegd <br/>";
