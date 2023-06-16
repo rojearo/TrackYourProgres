@@ -18,7 +18,7 @@ $FilmRating=$_POST["FilmRating"];
 $FilmBanner=$_POST["FilmBanner"];
 
 // maken object ---------------------------------------------------
-$Film1 = new film ($FilmID, $FilmNaam, $FilmBeschrijving, $FilmRating, $FilmBanner);
+$Film1 = new films ($FilmID, $FilmNaam, $FilmBeschrijving, $FilmRating, $FilmBanner);
 $Film1->updateFilm($FilmID);
 echo "Dit zijn de gewijzigde gegevens: <br/>";
 echo $FilmID."<br/>";
