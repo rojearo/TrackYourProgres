@@ -7,7 +7,7 @@
 </head>
 <body style="background-color: #2C3333">
 <div class="navbar">
-    <h1>TrackYourProgress</h1>
+    <h1><a href="index.php">TrackYourProgress</a></h1>
     <ul>
         <li>Films</li>
         <li>Series</li>

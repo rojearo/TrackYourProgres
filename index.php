@@ -31,18 +31,18 @@
 
 <div class="film-banner">
     <div class="small-images">
-        <img class="small-images2" src="images/under-construction-ga45fa8413_1920.jpg" alt="under-contruction">
-        <span class="caption">naam van film</span>
+        <img class="small-images2" src="images/spiderman.jpg" alt="under-contruction">
+        <span class="caption">spider-man: into the spider-verse 2</span>
     </div>
 
     <div class="small-images">
-        <img class="small-images2" src="images/under-construction-ga45fa8413_1920.jpg" alt="under-contruction">
-        <span class="caption">naam van film</span>
+        <img class="small-images2" src="images/Littlemermaid.jpg" alt="under-contruction">
+        <span class="caption">The Little Mermaid</span>
     </div>
 
     <div class="small-images">
-        <img class="small-images2" src="images/under-construction-ga45fa8413_1920.jpg" alt="under-contruction">
-        <span class="caption">naam van film</span>
+        <img class="small-images2" src="images/Mario_.jpg" alt="under-contruction">
+        <span class="caption">Mario</span>
     </div>
 
 </div>
