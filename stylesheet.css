@@ -1,7 +1,3 @@
-* {
-    padding: 0;
-    margin-bottom: 0;
-}
 
 .navbar {
     display: flex;
@@ -18,6 +14,10 @@
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
+}
+
+.navbar ul a{
+    text-decoration: none;
 }
 
 .navbar ul, li {
@@ -162,7 +162,6 @@ span {
     color: black;
     font-size: 12px;
     bottom: 68px;
-    position: absolute;
 }
 
 #login {
@@ -184,10 +183,16 @@ span {
     background-color: white;
 }
 
+.main-list a{
+    text-decoration: none;
+}
+
 .Box-Type{
     color: white;
+    display: flex;
+    width: 500px;
+    gap: 20px;
     text-decoration: none;
     background-color: white;
-    width: 100%;
     height: 100px;
 }
