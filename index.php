@@ -5,7 +5,7 @@
     <title>Title</title>
     <link rel="stylesheet" href="stylesheet.css">
 </head>
-<body style="background-color: #2C3333">
+<body style="background-color: #2C3333=">
 <div class="navbar">
     <h1>TrackYourProgress</h1>
     <ul>
@@ -16,12 +16,12 @@
     </ul>
     <ul>
         <li>Inloggen</li>
-        <li>Aanmelden</li>
+        <li> <a href="CreateAanmelden.php" >Aanmelden</a></li>
     </ul>
 </div>
 
 <div class="main">
-    <img class="images" src="images/under-construction-ga45fa8413_1920.jpg" alt="under-contruction">
+    <img class="images" src="images/intersellar.jpg" alt="under-contruction">
 </div>
 
 <div class="text">
@@ -31,17 +31,17 @@
 
 <div class="film-banner">
     <div class="small-images">
-        <img class="small-images2" src="images/spiderman.jpg" alt="under-contruction">
-        <span class="caption">spider-man: into the spider-verse 2</span>
+        <img class="small-images2" src="images/Joker.jpg" alt="under-contruction">
+        <span class="caption">The Joker</span>
     </div>
 
     <div class="small-images">
-        <img class="small-images2" src="images/Littlemermaid.jpg" alt="under-contruction">
-        <span class="caption">The Little Mermaid</span>
+        <img class="small-images2" src="images/LionKing.jpg" alt="under-contruction">
+        <span class="caption">LionKing</span>
     </div>
 
     <div class="small-images">
-        <img class="small-images2" src="images/Mario_.jpg" alt="under-contruction">
+        <img class="small-images2" src="images/Marvel.jpg" alt="under-contruction">
         <span class="caption">Mario</span>
     </div>
 

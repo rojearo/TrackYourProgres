@@ -62,13 +62,13 @@
 
 .small-images {
     width: 20%;
-    height: 400px;
+    height: 500px;
     margin-bottom: 50px;
 }
 
-.small-images2 {
+.small-images {
     border-radius: 5px;
-    height: 400px;
+    height: 500px;
     width: 100%;
 }
 
@@ -159,7 +159,7 @@
 }
 
 span {
-    color: black;
+    color: white;
     font-size: 12px;
     bottom: 68px;
 }
